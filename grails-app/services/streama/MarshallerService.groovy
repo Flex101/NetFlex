@@ -296,7 +296,7 @@ class MarshallerService {
         def returnArray = [:]
 
         returnArray['id'] = listItem.id
-        returnArray['isMovie'] = false
+        returnArray['isListItem'] = true
         returnArray['mediaType'] = 'listItem'
 
         returnArray['dateCreated'] = listItem.dateCreated
