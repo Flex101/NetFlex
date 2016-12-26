@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Streama</title>
+		<title>NetFlex</title>
 	</head>
 	<body>
 		<div class="content ng-cloak">
