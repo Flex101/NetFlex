@@ -31,7 +31,7 @@ class DashController {
       isNotEmpty("episodes")
     }
 
-    myList = myList.findAll{ myList->
+    myList = myList.findAll{ listItem->
       return myList.hasFiles
     }
 
