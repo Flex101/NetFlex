@@ -73,6 +73,21 @@
     <hr/>
   </div>
 
+  <!---------- MY LIST ---------->
+
+  <div ng-if="!selectedGenre">
+    <h3>"MY LIST"</h3>
+
+    <div class="spinner" ng-show="loadingMyList">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+  </div>
+
+  <!----------------------------->
+
   <div>
     <h3>
       <span ng-show="!selectedGenre">{{'DASHBOARD.DISCOVER_SHOWS' | translate}}</span>
