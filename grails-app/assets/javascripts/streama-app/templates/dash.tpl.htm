@@ -76,7 +76,7 @@
   <!---------- MY LIST ---------->
 
   <div ng-if="!selectedGenre">
-    <h3>"MY LIST"</h3>
+    <h3>MY LIST</h3>
 
     <div class="spinner" ng-show="loadingMyList">
       <div class="bounce1"></div>
@@ -84,6 +84,29 @@
       <div class="bounce3"></div>
     </div>
 
+    <p class="no-episodes-yet" ng-show="!myList.length">
+      LIST IS EMPTY
+    </p>
+
+    <div class="media-list">
+      <div class="media-list-item media-poster-item" ng-repeat="listItem in myList | orderBy:showSort.sort |filter: dashFilter.showFilter">
+        <div class="media-item" >
+          <img ng-if="listItem.poster_path" ng-src="https://image.tmdb.org/t/p/w300/{{::listItem.poster_path}}"/>
+          <img ng-if="!listItem.poster_path && !listItem.manualInput" ng-src="{{basePath}}assets/poster-not-found.png"/>
+
+          <img ng-show="listItem.manualInput && listItem.poster_image_src" ng-src="{{::listItem.poster_image_src}}">
+
+          <div class="play-text">
+            <h4 ng-bind="::listItem.name"></h4>
+          </div>
+
+          <i class="info-icon ion-ios-information" ng-click="showDetails(tvShow)"></i>
+          <a class="play-icon ion-ios-play" ng-click="fetchFirstEpisodeAndPlay(tvShow)"></a>
+        </div>
+      </div>
+    </div>
+
+    <hr/>
   </div>
 
   <!----------------------------->
