@@ -291,6 +291,35 @@ class MarshallerService {
       }
     }
 
+		JSON.createNamedConfig('dashListItem') { DefaultConverterConfiguration<JSON> cfg ->
+      cfg.registerObjectMarshaller(ListItem) { ListItem listItem ->
+        def returnArray = [:]
+
+        returnArray['id'] = listItem.id
+        returnArray['isMovie'] = false
+        returnArray['mediaType'] = 'listItem'
+
+        returnArray['dateCreated'] = listItem.dateCreated
+        returnArray['lastUpdated'] = listItem.lastUpdated
+        returnArray['overview'] = listItem.overview
+        returnArray['imdb_id'] = listItem.imdb_id
+        returnArray['vote_average'] = listItem.vote_average
+        returnArray['vote_count'] = listItem.vote_count
+        returnArray['popularity'] = listItem.popularity
+        returnArray['original_language'] = listItem.original_language
+        returnArray['title'] = listItem.title
+        returnArray['release_date'] = listItem.release_date
+        returnArray['backdrop_path'] = listItem.backdrop_path
+        returnArray['poster_path'] = listItem.poster_path
+        returnArray['trailerKey'] = listItem.trailerKey
+        returnArray['tags'] = listItem.tags
+        returnArray['genre'] = listItem.genre
+        returnArray['poster_image_src'] = listItem.poster_image?.src
+
+        return returnArray;
+      }
+    }
+
     JSON.createNamedConfig('dashMovies') { DefaultConverterConfiguration<JSON> cfg ->
       cfg.registerObjectMarshaller(Movie) { Movie  movie ->
         def returnArray = [:]

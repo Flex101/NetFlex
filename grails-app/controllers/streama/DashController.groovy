@@ -35,7 +35,7 @@ class DashController {
       return myList.hasFiles
     }
 
-    JSON.use ('dashMyList') {
+    JSON.use ('dashListItem') {
       respond myList
     }
   }
