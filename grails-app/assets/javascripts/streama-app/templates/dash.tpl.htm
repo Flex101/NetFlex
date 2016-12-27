@@ -104,12 +104,17 @@
 
           <i class="info-icon ion-ios-information" ng-click="showDetails(listItem)"></i>
           <a class="play-icon ion-ios-play" ng-click="fetchFirstEpisodeAndPlay(listItem)"></a>
-        </div>
+        </div>       
       </div>
       
       <div class="media-list-item media-poster-item">
-				<div class="media-item">
-					ADD NEW GROUP
+				<div class="media-item">					
+					<img ng-src="{{basePath}}assets/add.png"/>
+					
+					<div class="play-text">
+            <h4>Add New Group...</h4>
+          </div>
+					
 				</div>
       </div>
       
