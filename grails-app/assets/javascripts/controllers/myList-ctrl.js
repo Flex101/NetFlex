@@ -1,7 +1,8 @@
 'use strict';
 
-streamaApp.controller('myListCtrl', 
-	function ($scope, apiService, $state, $rootScope, localStorageService, modalService, $stateParams, $urlRouterProvider ) {
+streamaApp.controller('myListCtrl', [
+	'$scope', 'apiService', '$stateParams', '$rootScope',
+	function ($scope, apiService, $stateParams, $rootScope) {
 
 		$scope.loadingMyList = true;
 		apiService.myList.listMyList().success(function (data) {
@@ -9,4 +10,4 @@ streamaApp.controller('myListCtrl',
 			$scope.loadingMyList = false;
 		});
    
-});
+}]);
