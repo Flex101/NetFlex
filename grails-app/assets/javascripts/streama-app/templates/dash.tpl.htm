@@ -90,7 +90,7 @@
       LIST IS EMPTY
     </p>
 
-    <div class="media-list">
+    <div class="media-list" ng-show="myList.length">
       <div class="media-list-item media-poster-item" ng-repeat="listItem in myList">
         <div class="media-item">
           <img ng-if="listItem.poster_path" ng-src="https://image.tmdb.org/t/p/w300/{{::listItem.poster_path}}"/>
