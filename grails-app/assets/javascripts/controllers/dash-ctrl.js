@@ -85,13 +85,7 @@ streamaApp.controller('dashCtrl',
 		apiService.dash.listContinueWatching().success(function (data) {
 			$scope.continueWatching = data;
 		});
-
-		$scope.loadingMyList = true;
-		apiService.dash.listMyList().success(function (data) {
-			$scope.myList = data;
-			$scope.loadingMyList = false;
-		});
-
+		
 		$scope.loadingTvShows = true;
 		apiService.dash.listShows().success(function (data) {
 			$scope.tvShows = data;
