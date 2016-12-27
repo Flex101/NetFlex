@@ -92,7 +92,7 @@
 
     <div class="media-list">
       <div class="media-list-item media-poster-item" ng-repeat="listItem in myList">
-        <div class="media-item" >
+        <div class="media-item">
           <img ng-if="listItem.poster_path" ng-src="https://image.tmdb.org/t/p/w300/{{::listItem.poster_path}}"/>
           <img ng-if="!listItem.poster_path && !listItem.manualInput" ng-src="{{basePath}}assets/poster-not-found.png"/>
 
@@ -106,6 +106,13 @@
           <a class="play-icon ion-ios-play" ng-click="fetchFirstEpisodeAndPlay(listItem)"></a>
         </div>
       </div>
+      
+      <div class="media-list-item media-poster-item">
+				<div class="media-item">
+					ADD NEW GROUP
+				</div>
+      </div>
+      
     </div>
 
 		<hr/>
