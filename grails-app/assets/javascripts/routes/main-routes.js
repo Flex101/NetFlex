@@ -22,6 +22,22 @@ angular.module('streamaApp').config(function ($stateProvider) {
 				}]
 			}
 		})
+		
+		.state('myList', {
+			url: '/myList',
+			templateUrl: 'myList.htm',
+			controller: 'myListCtrl',
+			resolve: {
+				currentUser: ['apiService', '$rootScope', function (apiService, $rootScope) {
+					return apiService.currentUser().success(function (data) {
+						if (data) {
+							$rootScope.currentUser = data;
+							return data;
+						}
+					});
+				}]
+			}
+		})
 
 		.state('player', {
 			url: '/player/:videoId?currentTime?sessionId',
