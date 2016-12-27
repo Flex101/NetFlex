@@ -291,7 +291,7 @@ class MarshallerService {
       }
     }
 
-		JSON.createNamedConfig('dashListItem') { DefaultConverterConfiguration<JSON> cfg ->
+		JSON.createNamedConfig('myListListItem') { DefaultConverterConfiguration<JSON> cfg ->
       cfg.registerObjectMarshaller(ListItem) { ListItem listItem ->
         def returnArray = [:]
 

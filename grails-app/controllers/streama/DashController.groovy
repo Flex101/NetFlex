@@ -25,21 +25,6 @@ class DashController {
     }
   }
 
-  def listMyList(){
-	def myList = TvShow.withCriteria{
-      ne("deleted", true)
-      isNotEmpty("episodes")
-    }
-
-    myList = myList.findAll{ listItem->
-      return myList.hasFiles
-    }
-
-    JSON.use ('dashListItem') {
-      respond myList
-    }
-  }
-
   def listShows(){
     def tvShows = TvShow.withCriteria{
       ne("deleted", true)
@@ -85,7 +70,6 @@ class DashController {
       respond movies
     }
   }
-
 
   def listGenericVideos(){
     def videos = GenericVideo.withCriteria {
