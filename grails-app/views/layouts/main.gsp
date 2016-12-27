@@ -64,6 +64,11 @@
 					<span class="form-control-feedback ion-android-search" aria-hidden="true"></span>
 				</div>
 			</li>
+			
+			<sec:ifLoggedIn>
+				<li><a ui-sref="myList">My List</a></li>
+			</sec:ifLoggedIn>
+			
 			<sec:ifLoggedIn>
 				<li><a ui-sref="dash">{{'DASHBOARD.TITLE' | translate}}</a></li>
 			</sec:ifLoggedIn>
