@@ -241,10 +241,6 @@ streamaApp.factory('apiService', ['$http', '$rootScope', function ($http, $rootS
 			listContinueWatching: function () {
 				return $http.get(urlBase + 'dash/listContinueWatching.json');
 			},
-			
-			listMyList: function () {
-				return $http.get(urlBase + 'dash/listMyList.json');
-			},
 
 			listMovies: function () {
 				return $http.get(urlBase + 'dash/listMovies.json');
@@ -269,6 +265,12 @@ streamaApp.factory('apiService', ['$http', '$rootScope', function ($http, $rootS
 			listNewReleases: function () {
 				return $http.get(urlBase + 'dash/listNewReleases.json');
 			}
+		},
+		
+		myList: {
+			listMyList: function () {
+				return $http.get(urlBase + 'myList/listMyList.json');
+			},
 		},
 
 		websocket: {
