@@ -8,6 +8,5 @@ streamaApp.controller('myListCtrl',
 			$scope.myList = data;
 			$scope.loadingMyList = false;
 		});
-    
-  }
-]);
+   
+});
