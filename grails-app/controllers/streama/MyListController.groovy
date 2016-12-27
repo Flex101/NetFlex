@@ -7,6 +7,21 @@ class MyListController {
 
 	def springSecurityService	
 	
+	def listGroups(){
+	def myGroups = TvShow.withCriteria{
+      ne("deleted", true)
+      isNotEmpty("episodes")
+    }
+
+    myGroups = myGroups.findAll{ listGroup->
+      return myGroups.hasFiles
+    }
+
+    JSON.use ('myListListItem') {
+      respond myGroups
+    }
+	}
+		
   def listMyList(){
 	def myList = TvShow.withCriteria{
       ne("deleted", true)

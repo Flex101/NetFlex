@@ -1,5 +1,5 @@
 clear
 echo Building...
-echo .
+echo 
 ./grailsw war ROOT.war -Dgrails.env=production
 
