@@ -8,10 +8,7 @@ class MyListController {
 	def springSecurityService	
 	
 	def listGroups(){
-	def myGroups = TvShow.withCriteria{
-      ne("deleted", true)
-      isNotEmpty("episodes")
-    }
+	def myGroups;
 
     myGroups = myGroups.findAll{ listGroup->
       return myGroups.hasFiles
