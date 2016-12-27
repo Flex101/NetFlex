@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta name='layout' content='noAngular'/>
-	<title>Streama</title>
+	<title>NetFlex</title>
 </head>
 
 <body>

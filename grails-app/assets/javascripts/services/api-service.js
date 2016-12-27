@@ -268,9 +268,13 @@ streamaApp.factory('apiService', ['$http', '$rootScope', function ($http, $rootS
 		},
 		
 		myList: {
+			listGroups: function () {
+				return $http.get(urlBase + 'myList/listGroups.json');
+			},
+			
 			listMyList: function () {
 				return $http.get(urlBase + 'myList/listMyList.json');
-			},
+			}
 		},
 
 		websocket: {

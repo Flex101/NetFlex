@@ -290,6 +290,18 @@ class MarshallerService {
         return returnArray;
       }
     }
+    
+    JSON.createNamedConfig('myListGroup') { DefaultConverterConfiguration<JSON> cfg ->
+      cfg.registerObjectMarshaller(ListGroup) { ListGroup listGroup ->
+        def returnArray = [:]
+
+        returnArray['id'] = listGroup.id
+        returnArray['isListGroup'] = true
+        returnArray['mediaType'] = 'listGroup'
+
+        return returnArray;
+      }
+    }
 
 		JSON.createNamedConfig('myListListItem') { DefaultConverterConfiguration<JSON> cfg ->
       cfg.registerObjectMarshaller(ListItem) { ListItem listItem ->
