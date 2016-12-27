@@ -1,7 +1,7 @@
 'use strict';
 
 streamaApp.controller('dashCtrl',
-	function ($scope, apiService, $state, $rootScope, localStorageService, modalService, $stateParams, $urlRouterProvider ) {
+	function ($scope, apiService, $state, $rootScope, localStorageService, modalService, $stateParams ) {
 
 		if ($rootScope.currentUser.isAdmin) {
 			apiService.settings.list().success(function (data) {
