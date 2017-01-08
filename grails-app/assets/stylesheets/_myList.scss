@@ -19,8 +19,13 @@
     font-weight: 100;
   }
 
-	.btn-lg {
+	.btn-lg{
 		padding: 10px 15px;
 	}
-
+	
+	.dropdown-groupMenu{
+		@extend .dropdown-menu;
+		right: 0px;
+		left: inherit;
+	}
 }
