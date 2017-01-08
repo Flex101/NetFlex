@@ -4,6 +4,8 @@
   My List
 </h1>
 
+<hr style="margin-top:0px"/>
+
 <div class="myList">
 	
 	<div class="spinner" ng-show="loadingGroups">
@@ -20,7 +22,6 @@
 
 	<div class="media-list" ng-repeat="listGroup in myGroups">
 		
-		<hr/>
 		<h3 ng-bind="::listGroup.name"></h3>
 
 		<p class="no-episodes-yet">
@@ -58,6 +59,7 @@
 			</div>
 		</div>
 			
+		<hr/>
 	</div>
 	
 	<!--

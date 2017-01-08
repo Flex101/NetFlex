@@ -1,6 +1,13 @@
 .myList{
   padding: 15px;
 
+	h1{
+		margin-left: 15px;
+		margin-top: 10px;
+		margin-right: 5px;
+		margin-bottom: 0px;
+	}
+
   h3{
     font-size: 16px;
     text-transform: uppercase;
@@ -15,4 +22,8 @@
     font-weight: 100;
   }
 
+	.btn-lg {
+		padding: 10px 15px;
+		margin-right: 10px;
+	}
 }
