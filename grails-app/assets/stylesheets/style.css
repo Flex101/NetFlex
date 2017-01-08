@@ -1119,7 +1119,8 @@ hr {
   padding: 15px; }
   .myList h3 {
     font-size: 16px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-top: 0px; }
   .myList .genre-display {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding-bottom: 18px;
