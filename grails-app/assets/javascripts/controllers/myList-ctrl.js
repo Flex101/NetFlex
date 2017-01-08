@@ -17,9 +17,15 @@ streamaApp.controller('myListCtrl', [
 		});
 		
 		$scope.openGroupModal = function () {
-		modalService.groupModal(null, function (data) {
-			$state.go('admin.group', {groupId: data.id});
-		});
-	};
+			modalService.groupModal(null, function (data) {
+				$state.go('admin.group', {groupId: data.id});
+			});
+		};
+		
+		$scope.deleteGroup = function (group) {
+			apiService.myList.deleteGroup(group).success(function (data) {
+				alertify.success("Group deleted.");
+			});
+		};
    
 }]);
