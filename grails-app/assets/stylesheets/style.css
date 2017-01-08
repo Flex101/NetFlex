@@ -1118,10 +1118,7 @@ hr {
 .myList {
   padding: 15px; }
   .myList h1 {
-    margin-left: 15px;
-    margin-top: 10px;
-    margin-right: 5px;
-    margin-bottom: 0px; }
+    margin-top: 0px; }
   .myList h3 {
     font-size: 16px;
     text-transform: uppercase;
@@ -1133,8 +1130,7 @@ hr {
     font-size: 26px;
     font-weight: 100; }
   .myList .btn-lg {
-    padding: 10px 15px;
-    margin-right: 10px; }
+    padding: 10px 15px; }
 
 #login {
   margin: 15px 0px;

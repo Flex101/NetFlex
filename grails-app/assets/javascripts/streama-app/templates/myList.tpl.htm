@@ -6,7 +6,7 @@
 		My List
 	</h1>
 	
-	<hr style="margin-top:0px"/>
+	<hr/>
 	
 	<div class="spinner" ng-show="loadingGroups">
 		<div class="bounce1"></div>
@@ -20,11 +20,11 @@
 	
 	<hr ng-show="!myGroups.length" />
 
-	<div class="media-list" ng-repeat="listGroup in myGroups">
+	<div class="media-list" style="position:relative" ng-repeat="listGroup in myGroups">
 		
 		<h3 ng-bind="::listGroup.name"></h3>
 
-		<p class="no-episodes-yet">
+		<p class="no-episodes-yet" style="position:absolute;width=100%">
 			GROUP IS EMPTY
 		</p>
 		
