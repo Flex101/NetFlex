@@ -10,6 +10,7 @@ streamaApp.controller('modalGroupCtrl', [
 	$scope.addGroup = function (group) {
 		apiService.myList.addGroup(group).success(function (data) {
 			$uibModalInstance.close(data);
+			location.reload();
       alertify.success("Group added.");
 		});
 	};

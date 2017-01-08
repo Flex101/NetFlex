@@ -24,6 +24,7 @@ streamaApp.controller('myListCtrl', [
 		
 		$scope.deleteGroup = function (group) {
 			apiService.myList.deleteGroup(group).success(function (data) {
+				location.reload();
 				alertify.success("Group deleted.");
 			});
 		};
