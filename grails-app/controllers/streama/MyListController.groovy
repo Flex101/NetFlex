@@ -21,7 +21,7 @@ class MyListController {
 	}
 	
 	def listGroups(){
-	def myGroups = Group.withCriteria{
+	def myGroups = ListGroup.withCriteria{
 		ne("deleted", true)
 		}
 
