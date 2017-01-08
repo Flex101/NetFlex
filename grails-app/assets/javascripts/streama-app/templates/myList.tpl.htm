@@ -6,10 +6,14 @@
 		<div class="bounce3"></div>
 	</div>
 
+	<p class="no-episodes-yet" ng-show="!groups.length">
+		NO GROUPS
+	</p>
+
 	<div class="media-list" ng-repeat="listGroup in groups">
 		<h3 ng-bind="::listGroup.name" />
 
-		<p class="no-episodes-yet" ng-show="!groups.length">
+		<p class="no-episodes-yet">
 			GROUP IS EMPTY
 		</p>
 		
