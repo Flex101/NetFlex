@@ -268,6 +268,11 @@ streamaApp.factory('apiService', ['$http', '$rootScope', function ($http, $rootS
 		},
 		
 		myList: {
+			
+			addGroup: function (data) {
+				return $http.post(urlBase + 'myList/addGroup.json', data);
+			},
+			
 			listGroups: function () {
 				return $http.get(urlBase + 'myList/listGroups.json');
 			},

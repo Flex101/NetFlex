@@ -2,6 +2,7 @@ package streama
 
 class ListGroup{
 
-  String title
+  String title  
+  Boolean deleted = false
 
 }

@@ -5,7 +5,20 @@ import static org.springframework.http.HttpStatus.*
 
 class MyListController {
 
+	static responseFormats = ['json', 'xml']
+  static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
 	def springSecurityService	
+	
+	def addGroup(ListGroup groupInstance){
+		if (groupInstance == null) {
+      render status: NOT_FOUND
+      return
+    }
+    
+    groupInstance.save flush: true
+    respond groupInstance, [status: CREATED]
+	}
 	
 	def listGroups(){
 	def myGroups;
