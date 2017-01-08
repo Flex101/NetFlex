@@ -9,9 +9,11 @@
 	<p class="no-episodes-yet" ng-show="!myGroups.length">
 		NO GROUPS
 	</p>
+	
+	<hr ng-show="!myGroups.length" />
 
 	<div class="media-list" ng-repeat="listGroup in myGroups">
-		<h3 ng-bind="::listGroup.name" />
+		<h3 ng-bind="::listGroup.name"></h3>
 
 		<p class="no-episodes-yet">
 			GROUP IS EMPTY
@@ -34,9 +36,8 @@
 			</div>       
 		</div>
 		-->
-		
+			<hr/>
 	</div>
-	<hr/>
 	
 	<div class="media-list" ng-show="!loadingGroups">
 		<div class="media-list-item media-poster-item">

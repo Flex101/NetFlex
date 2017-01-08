@@ -7,12 +7,12 @@
 
     <div class="form-group">
       <div class="col-sm-12 typeahead-wrapper">
-        <input type="text" class="form-control name-input" ng-model="group.title" placeholder="New Group Name..." >
+        <input type="text" class="form-control name-input" ng-model="group.name" placeholder="New Group Name..." >
       </div>
     </div>
 
   <div class="modal-footer">
-    <button class="btn btn-success" ng-click="addGroup(group)" ng-disabled="!group.title">Add</button>
+    <button class="btn btn-success" ng-click="addGroup(group)" ng-disabled="!group.name">Add</button>
     <button class="btn btn-default" ng-click="cancel()">Cancel</button>
   </div>
 </form>
