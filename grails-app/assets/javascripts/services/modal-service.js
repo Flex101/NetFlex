@@ -38,7 +38,6 @@ streamaApp.factory('modalService', ['$uibModal', '$state', function ($uibModal, 
 		},
 
 
-
 		genericVideoModal: function (video, callback) {
 			var modalInstance = $uibModal.open({
 				templateUrl: 'modal--genericVideo.htm',
@@ -171,6 +170,24 @@ streamaApp.factory('modalService', ['$uibModal', '$state', function ($uibModal, 
 			}, function () {
 				//$state.go('dash', {mediaModal: null, mediaType: null});
 			});
+		},
+		
+		groupModal: function (group, callback) {
+			var modalInstance = $uibModal.open({
+				templateUrl: 'modal--group.htm',
+				controller: 'modalGroupCtrl',
+				size: 'lg',
+				resolve: {
+					group: function () {
+						return group;
+					}
+				}
+			});
+
+			modalInstance.result.then(function (data) {
+				(callback || angular.noop)(data);
+			});
 		}
+		
 	};
 }]);

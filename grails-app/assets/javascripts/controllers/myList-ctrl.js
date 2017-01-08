@@ -15,5 +15,11 @@ streamaApp.controller('myListCtrl', [
 			$scope.myList = data;
 			$scope.loadingMyList = false;
 		});
+		
+		$scope.openGroupModal = function () {
+		modalService.groupModal(null, function (data) {
+			$state.go('admin.group', {groupId: data.id});
+		});
+	};
    
 }]);
