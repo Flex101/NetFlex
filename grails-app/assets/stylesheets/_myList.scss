@@ -23,9 +23,10 @@
 		padding: 10px 15px;
 	}
 	
-	.dropdown-groupMenu{
-		@extend .dropdown-menu;
-		right: 0px;
-		left: inherit;
-	}
+}
+
+.dropdown-groupMenu{
+	@extend .dropdown-menu;	
+	right: 0px;
+	left: inherit;
 }
