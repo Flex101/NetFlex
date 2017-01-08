@@ -198,7 +198,7 @@ label {
   background-color: #292C2F;
   font-size: 12px; }
 
-.dropdown-menu {
+.dropdown-menu, .myList .dropdown-groupMenu {
   z-index: 9999;
   max-height: 500px;
   overflow: auto; }
@@ -631,7 +631,7 @@ header.main {
   margin: 0;
   padding: 8px 9px 8px 0px; }
 
-.dropdown-menu > li > a.typeahead-item {
+.dropdown-menu > li > a.typeahead-item, .myList .dropdown-groupMenu > li > a.typeahead-item {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -644,12 +644,12 @@ header.main {
   padding: 7px;
   font-size: 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
-  .dropdown-menu > li > a.typeahead-item img {
+  .dropdown-menu > li > a.typeahead-item img, .myList .dropdown-groupMenu > li > a.typeahead-item img {
     margin-right: 10px;
     width: 50px; }
-  .dropdown-menu > li > a.typeahead-item.inactive {
+  .dropdown-menu > li > a.typeahead-item.inactive, .myList .dropdown-groupMenu > li > a.typeahead-item.inactive {
     opacity: 0.5; }
-.dropdown-menu > li:last-child > a {
+.dropdown-menu > li:last-child > a, .myList .dropdown-groupMenu > li:last-child > a {
   border: none; }
 
 hr {
@@ -1131,6 +1131,9 @@ hr {
     font-weight: 100; }
   .myList .btn-lg {
     padding: 10px 15px; }
+  .myList .dropdown-groupMenu {
+    right: 0px;
+    left: inherit; }
 
 #login {
   margin: 15px 0px;
