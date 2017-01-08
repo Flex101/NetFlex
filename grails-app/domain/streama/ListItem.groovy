@@ -2,6 +2,6 @@ package streama
 
 class ListItem{
 
-  String title
+  String name
 
 }

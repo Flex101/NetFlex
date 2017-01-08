@@ -298,6 +298,8 @@ class MarshallerService {
         returnArray['id'] = listGroup.id
         returnArray['isListGroup'] = true
         returnArray['mediaType'] = 'listGroup'
+        
+        returnArray['name'] = listGroup.name
 
         return returnArray;
       }
