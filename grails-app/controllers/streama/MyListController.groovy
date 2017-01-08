@@ -10,6 +10,7 @@ class MyListController {
 
 	def springSecurityService	
 	
+	@Transactional
 	def addGroup(ListGroup groupInstance){
 		if (groupInstance == null) {
       render status: NOT_FOUND
@@ -18,6 +19,18 @@ class MyListController {
     
     groupInstance.save flush: true
     respond groupInstance, [status: CREATED]
+	}
+	
+	@Transactional
+	def deleteGroup(ListGroup groupInstance){
+		if (groupInstance == null) {
+      render status: NOT_FOUND
+      return
+    }
+    
+    groupInstance.deleted = true
+    groupInstance.save failOnError: true, flush: true
+    render status: NO_CONTENT
 	}
 	
 	def listGroups(){
