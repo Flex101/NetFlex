@@ -1131,6 +1131,8 @@ hr {
     font-weight: 100; }
   .myList .btn-lg {
     padding: 10px 15px; }
+  .myList .media-list-item {
+    margin-bottom: 0px; }
 
 #login {
   margin: 15px 0px;
