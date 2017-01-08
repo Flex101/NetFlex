@@ -21,13 +21,11 @@ class MyListController {
 	}
 	
 	def listGroups(){
-	def myGroups;
+	def myGroups = Group.withCriteria{
+		ne("deleted", true)
+		}
 
-    myGroups = myGroups.findAll{ listGroup->
-      return myGroups.hasFiles
-    }
-
-    JSON.use ('myListListItem') {
+    JSON.use ('myListGroup') {
       respond myGroups
     }
 	}

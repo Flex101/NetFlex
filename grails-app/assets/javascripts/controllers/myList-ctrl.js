@@ -6,7 +6,7 @@ streamaApp.controller('myListCtrl', [
 
 		$scope.loadingGroups = true;
 		apiService.myList.listGroups().success(function (data) {
-			$scope.groups = data;
+			$scope.myGroups = data;
 			$scope.loadingGroups = false;
 		});
 
