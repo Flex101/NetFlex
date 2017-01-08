@@ -1,8 +1,8 @@
 'use strict';
 
 streamaApp.controller('myListCtrl', [
-	'$scope', 'apiService', '$stateParams', '$rootScope',
-	function ($scope, apiService, $stateParams, $rootScope) {
+	'$scope', 'apiService', 'modalService', '$stateParams', '$rootScope',
+	function ($scope, apiService, modalService, $stateParams, $rootScope) {
 
 		$scope.loadingGroups = true;
 		apiService.myList.listGroups().success(function (data) {
