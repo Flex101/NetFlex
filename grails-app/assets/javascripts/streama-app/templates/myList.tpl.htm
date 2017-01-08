@@ -23,6 +23,18 @@
 	<div class="media-list" style="position:relative" ng-repeat="listGroup in myGroups">
 			
 		<h3 ng-bind="::listGroup.name"></h3>
+		
+		<div class="col-md-1">
+			<div class="btn-group pull-right">
+				<span uib-dropdown on-toggle="toggled(open)">
+					<i class="ion-ios-settings icon-xl" uib-dropdown-toggle></i>
+					<ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+						<li><a ng-click="">Rename Group</a></li>
+						<li><a ng-click="deleteGroup(listGroup)">Delete Group</a></li>
+					</ul>
+				</span>
+			</div>
+		</div>
 
 		<p class="no-episodes-yet" style="position:absolute;width:100%">
 			GROUP IS EMPTY
