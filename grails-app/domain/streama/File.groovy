@@ -14,6 +14,7 @@ class File {
   String originalFilename
   Long size
   String externalLink
+  String localFile
   String quality
 
   static constraints = {
@@ -23,7 +24,7 @@ class File {
   static transients = ['uploadService']
 
   def getImagePath(){
-    uploadService.getPath(sha256Hex, extension)
+    uploadService.getPath(this)
   }
 
   def getSrc(){
@@ -74,5 +75,14 @@ class File {
     else if(TvShow.findByDeletedNotEqualAndPoster_image(true, this)){
       return true
     }
+  }
+
+  def getSimpleInstance(){
+    return [
+        id: this.id,
+        src: this.getSrc(),
+        originalFilename: this.originalFilename,
+        contentType: this.contentType
+    ]
   }
 }
